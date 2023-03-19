@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
 
@@ -111,7 +113,11 @@
     }
     @endif
 </script>
+    <!--tinymce js-->
+    <script src="{{ asset('backend/assets/libs/tinymce/tinymce.min.js') }} "></script>
 
-</body>
+    <!-- init js -->
+    <script src="{{ asset('backend/assets/js/pages/form-editor.init.js') }} "></script>
+    </body>
 
 </html>
