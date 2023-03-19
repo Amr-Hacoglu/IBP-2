@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\HomeSliderController;
+use App\Http\Controllers\Home\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,13 @@ Route::controller(HomeSliderController::class)->group(function () {
 //Admin All Route
 Route::controller(AdminController::class)->group(function (){
     Route::get('/about/logout','destroy')->name('admin.logout');
+});
+
+// About Page All Route
+Route::controller(AboutController::class)->group(function () {
+    Route::get('/about/page', 'AboutPage')->name('about.page');
+
+
 });
 
 Route::get('/dashboard', function () {

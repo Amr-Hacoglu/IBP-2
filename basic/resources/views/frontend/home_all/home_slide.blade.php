@@ -25,5 +25,5 @@
     </div>
     <div class="banner__video">
         <a href="{{ $homeslide->video_url  }}" class="popup-video"><i class="fas fa-play"></i></a> {{--take the url from database and display it on the page--}}
-
+    </div>
 </section>
