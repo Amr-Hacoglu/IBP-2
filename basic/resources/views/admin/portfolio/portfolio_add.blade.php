@@ -10,13 +10,13 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h4 class="card-title">Protfolio Page </h4>
+                            <h4 class="card-title">Portfolio Page </h4>
 
                             <form method="post" action="{{ route('store.portfolio') }}" enctype="multipart/form-data">
                                 @csrf
 
                                 <div class="row mb-3">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Protfolio Name</label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Name</label>
                                     <div class="col-sm-10">
                                         <input name="portfolio_name" class="form-control" type="text" id="example-text-input">
                                         @error('portfolio_name')
@@ -27,7 +27,7 @@
                                 <!-- end row -->
 
                                 <div class="row mb-3">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Protfolio Title </label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Title </label>
                                     <div class="col-sm-10">
                                         <input name="portfolio_title" class="form-control" type="text" id="example-text-input">
                                         @error('portfolio_title')
@@ -38,7 +38,7 @@
                                 <!-- end row -->
 
                                 <div class="row mb-3">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Protfolio Description </label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Description </label>
                                     <div class="col-sm-10">
       <textarea id="elm1" name="portfolio_description">
 
@@ -48,7 +48,7 @@
                                 <!-- end row -->
 
                                 <div class="row mb-3">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Protfolio Image </label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Image </label>
                                     <div class="col-sm-10">
                                         <input name="portfolio_image" class="form-control" type="file" id="image">
                                     </div>
@@ -63,7 +63,7 @@
                                     </div>
                                 </div>
                                 <!-- end row -->
-                                <input type="submit" class="btn btn-info waves-effect waves-light" value="Insert Protfolio Data">
+                                <input type="submit" class="btn btn-info waves-effect waves-light" value="Insert Portfolio Data">
                             </form>
                         </div>
                     </div>
