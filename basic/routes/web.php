@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\AboutController;
+use App\Http\Controllers\Home\PortfolioController;
 
 
 /*
@@ -52,7 +53,6 @@ Route::controller(AboutController::class)->group(function () {
     Route::get('/edit/multi/image/{id}', 'EditMultiImage')->name('edit.multi.image');
     Route::post('/update/multi/image', 'UpdateMultiImage')->name('update.multi.image');
     Route::get('/delete/multi/image/{id}', 'DeleteMultiImage')->name('delete.multi.image');
-
 });
 
 Route::get('/dashboard', function () {
@@ -73,6 +73,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+// Porfolio All Route
+Route::controller(PortfolioController::class)->group(function () {
+    Route::get('/all/portfolio', 'AllPortfolio')->name('all.portfolio');
+
+
 });
 
 require __DIR__.'/auth.php';
