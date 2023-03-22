@@ -15,8 +15,6 @@
                             <form method="post" action="{{ route('update.blog.category',$blogcategory->id) }}" >
                                 @csrf
 
-
-
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Blog Category Name</label>
                                     <div class="col-sm-10">
@@ -28,23 +26,13 @@
                                 </div>
                                 <!-- end row -->
 
-
                                 <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Blog Category">
                             </form>
-
-
-
                         </div>
                     </div>
                 </div> <!-- end col -->
             </div>
-
-
-
         </div>
     </div>
-
-
-
 
 @endsection
