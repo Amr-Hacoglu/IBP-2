@@ -25,7 +25,7 @@ Route::get('/', function () {
 
 Route::controller(DemoController::class)->group(function () {
     Route::get('/about', 'Index')->name('about.page')->middleware('check');
-    Route::get('/contact', 'ContactMethod')->name('cotact.page');
+    Route::get('/contact', 'ContactMethod')->name('contact.page');
 });
 
 
@@ -78,7 +78,8 @@ Route::middleware('auth')->group(function () {
 // Porfolio All Route
 Route::controller(PortfolioController::class)->group(function () {
     Route::get('/all/portfolio', 'AllPortfolio')->name('all.portfolio');
-
+    Route::get('/add/portfolio', 'AddPortfolio')->name('add.portfolio');
+    Route::post('/store/portfolio', 'StorePortfolio')->name('store.portfolio');
 
 });
 
