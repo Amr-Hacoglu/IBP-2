@@ -101,7 +101,8 @@ Route::controller(BlogCategoryController::class)->group(function () {
 // Blog All Route
 Route::controller(BlogController::class)->group(function () {
     Route::get('/all/blog', 'AllBlog')->name('all.blog');
-
+    Route::get('/add/blog', 'AddBlog')->name('add.blog');
+    Route::post('/store/blog', 'StoreBlog')->name('store.blog');
 });
 
 require __DIR__.'/auth.php';
