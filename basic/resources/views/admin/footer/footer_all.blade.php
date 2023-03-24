@@ -12,7 +12,7 @@
 
             <h4 class="card-title">Footer Page </h4>
 
-            <form method="post" action="{{ route('update.about') }}" >
+            <form method="post" action="{{ route('update.footer') }}" >
                 @csrf
 
                 <input type="hidden" name="id" value="{{ $allfooter->id }}">
@@ -63,9 +63,9 @@
 
 
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">Instagram</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label">Twitter</label>
                 <div class="col-sm-10">
-                    <input name="instagram" class="form-control" type="text" value="{{ $allfooter->instagram }}"  id="example-text-input">
+                    <input name="twitter" class="form-control" type="text" value="{{ $allfooter->twitter }}"  id="example-text-input">
                 </div>
             </div>
             <!-- end row -->
