@@ -71,6 +71,22 @@
             <!-- end row -->
 
             <div class="row mb-3">
+                <label for="example-text-input" class="col-sm-2 col-form-label">Instagram</label>
+                <div class="col-sm-10">
+                    <input name="instagram" class="form-control" type="text" value="{{ $allfooter->instagram }}"  id="example-text-input">
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row mb-3">
+                <label for="example-text-input" class="col-sm-2 col-form-label">Linkedin-in</label>
+                <div class="col-sm-10">
+                    <input name="linkedinin" class="form-control" type="text" value="{{ $allfooter->linkedinin }}"  id="example-text-input">
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-2 col-form-label">Copyright</label>
                 <div class="col-sm-10">
                     <input name="copyright" class="form-control" type="text" value="{{ $allfooter->copyright }}"  id="example-text-input">

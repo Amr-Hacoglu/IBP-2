@@ -40,8 +40,8 @@ $allfooter = App\Models\Footer::find(1);
                         <ul class="footer__social__list">
                             <li><a href="{{ $allfooter->facebook }}"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="{{ $allfooter->twitter }}"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="{{ $allfooter->instagram }}"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="{{ $allfooter->linkedinin }}"><i class="fab fa-linkedin-in"></i></a></li>
                         </ul>
                     </div>
                 </div>
