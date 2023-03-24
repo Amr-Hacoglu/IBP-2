@@ -65,13 +65,15 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');// اهم نقطة هون انو الشخص الي مو داخل بالايميل مابصير يدخل للشاشة الرئيسية بيتوجه لشاشة تسجيل الدخول
 
 //Profile
-Route::controller(AdminController::class)->group(function (){
-    Route::get('/about/logout','destroy')->name('admin.logout');
-    Route::get('/about/profile','Profile')->name('admin.profile');
-    Route::get('/edit/profile', 'EditProfile')->name('edit.profile');
-    Route::post('/store/profile', 'StoreProfile')->name('store.profile');
-    Route::get('/change/password', 'ChangePassword')->name('change.password');
-    Route::post('/update/password', 'UpdatePassword')->name('update.password');
+Route::middleware(['auth'])->group(function () {
+    Route::controller(AdminController::class)->group(function (){
+        Route::get('/about/logout','destroy')->name('admin.logout');
+        Route::get('/about/profile','Profile')->name('admin.profile');
+        Route::get('/edit/profile', 'EditProfile')->name('edit.profile');
+        Route::post('/store/profile', 'StoreProfile')->name('store.profile');
+        Route::get('/change/password', 'ChangePassword')->name('change.password');
+        Route::post('/update/password', 'UpdatePassword')->name('update.password');
+    });
 });
 
 Route::middleware('auth')->group(function () {
