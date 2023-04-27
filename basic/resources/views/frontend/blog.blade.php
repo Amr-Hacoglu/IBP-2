@@ -16,7 +16,7 @@ Blog | EasyLearning Website
                <h2 class="title"> All Works </h2>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">Works</li>
                                     </ol>
                                 </nav>
@@ -73,13 +73,6 @@ Blog | EasyLearning Website
                         </div>
                         <div class="col-lg-4">
                             <aside class="blog__sidebar">
-                                <div class="widget">
-                                    <form action="#" class="search-form">
-                                        <input type="text" placeholder="Search">
-                                        <button type="submit"><i class="fal fa-search"></i></button>
-                                    </form>
-                                </div>
-
 
         <div class="widget">
             <h4 class="widget-title">Recent Works</h4>
@@ -115,8 +108,7 @@ Blog | EasyLearning Website
                                     <h4 class="widget-title">Notes</h4>
                                     <ul class="sidebar__comment">
                                         <li class="sidebar__comment__item">
-                                            <a href="blog-details.html">Rasalina Sponde</a>
-                                            <p>There are many variations of passages of lorem ipsum available, but the majority have</p>
+                                            <a href="blog-details.html"></a>
                                         </li>
                                     </ul>
                                 </div>

@@ -16,7 +16,7 @@ About | EasyLearning Website
                             <h2 class="title">About me</h2>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">About Me</li>
                                 </ol>
                             </nav>
@@ -49,7 +49,7 @@ About | EasyLearning Website
                     <div class="col-lg-6">
                         <div class="about__content">
                             <div class="section__title">
-                                <span class="sub-title">01 - About me</span>
+                                <span class="sub-title">About me</span>
                                 <h2 class="title">{{ $aboutpage->title }}</h2>
                             </div>
                             <div class="about__exp">

@@ -16,7 +16,7 @@ Contact | EasyLearning Website
                                 <h2 class="title">Contact us</h2>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">Contact</li>
                                     </ol>
                                 </nav>
@@ -39,7 +39,7 @@ Contact | EasyLearning Website
 
             <!-- contact-map -->
             <div id="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96811.54759587669!2d-74.01263924803828!3d40.6880494567041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25bae694479a3%3A0xb9949385da52e69e!2sBarclays%20Center!5e0!3m2!1sen!2sbd!4v1636195194646!5m2!1sen!2sbd"
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6002.8463984217005!2d32.6522504!3d41.2125472!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40835335ca55f4a3%3A0x58c149eab8f0a954!2zS2FyYWLDvGssIEthcmFiw7xrIE1lcmtlei9LYXJhYsO8aw!5e0!3m2!1sen!2str!4v1682609136727!5m2!1sen!2str%22%20width=%22600%22%20height=%22450%22%20style=%22border:0;%22%20allowfullscreen=%22%22%20loading=%22lazy%22%20referrerpolicy=%22no-referrer-when-downgrade"
                     allowfullscreen loading="lazy"></iframe>
             </div>
             <!-- contact-map-end -->
@@ -71,79 +71,11 @@ Contact | EasyLearning Website
             <!-- contact-area-end -->
 
             <!-- contact-info-area -->
-            <section class="contact-info-area">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="contact__info">
-                                <div class="contact__info__icon">
-                                    <img src="{{ asset('frontend/assets/img/icons/contact_icon01.png') }}" alt="">
-                                </div>
-                                <div class="contact__info__content">
-                                    <h4 class="title">address line</h4>
-                                    <span>Bowery St, New York, <br> NY 10013,USA</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="contact__info">
-                                <div class="contact__info__icon">
-                                    <img src="{{ asset('frontend/assets/img/icons/contact_icon02.png') }}" alt="">
-                                </div>
-                                <div class="contact__info__content">
-                                    <h4 class="title">Phone Number</h4>
-                                    <span>+1255 - 568 - 6523</span>
-                                    <span>+1255 - 568 - 6523</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="contact__info">
-                                <div class="contact__info__icon">
-                                    <img src="{{ asset('frontend/assets/img/icons/contact_icon03.png') }}" alt="">
-                                </div>
-                                <div class="contact__info__content">
-                                    <h4 class="title">Mail Address</h4>
-                                    <span>email@example.com</span>
-                                    <span>info@yourdomain.com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
             <!-- contact-info-area-end -->
 
             <!-- contact-area -->
-            <section class="homeContact homeContact__style__two">
-                <div class="container">
-                    <div class="homeContact__wrap">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="section__title">
-                                    <span class="sub-title">07 - Say hello</span>
-                                    <h2 class="title">Any questions? Feel free <br> to contact</h2>
-                                </div>
-                                <div class="homeContact__content">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
-                                    <h2 class="mail"><a href="mailto:Info@webmail.com">Info@webmail.com</a></h2>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="homeContact__form">
-                                    <form action="#">
-                                        <input type="text" placeholder="Enter name*">
-                                        <input type="email" placeholder="Enter mail*">
-                                        <input type="number" placeholder="Enter number*">
-                                        <textarea name="message" placeholder="Enter Massage*"></textarea>
-                                        <button type="submit">Send Message</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
             <!-- contact-area-end -->
 
         </main>

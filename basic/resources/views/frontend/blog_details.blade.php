@@ -13,7 +13,7 @@
                                 <h2 class="title">{{ $blogs->blog_title }}</h2>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
                                     </ol>
                                 </nav>
@@ -75,12 +75,6 @@
             </div>
     <div class="col-lg-4">
             <aside class="blog__sidebar">
-                <div class="widget">
-                    <form action="#" class="search-form">
-                        <input type="text" placeholder="Search">
-                        <button type="submit"><i class="fal fa-search"></i></button>
-                    </form>
-                </div>
 
                 <div class="widget">
                     <h4 class="widget-title">Recent Blog</h4>
@@ -89,10 +83,10 @@
                         @foreach($allblogs as $all )
                         <li class="rc__post__item">
                             <div class="rc__post__thumb">
-                                <a href="blog-details.html"><img src="{{ asset($all->blog_image) }} " alt=""></a>
+                                <a href="{{ route('blog.details',$all->id) }}"><img src="{{ asset($all->blog_image) }} " alt=""></a>
                             </div>
                             <div class="rc__post__content">
-                                <h5 class="title"><a href="blog-details.html">{{ $all->blog_title }}
+                                <h5 class="title"><a href="{{ route('blog.details',$all->id) }}">{{ $all->blog_title }}
                                  </a></h5>
                                 <span class="post-date"><i class="fal fa-calendar-alt"></i> {{ Carbon\Carbon::parse($all->created_at)->diffForHumans() }} </span>
                             </div>
@@ -114,8 +108,7 @@
                     <h4 class="widget-title">Recent Comment</h4>
                     <ul class="sidebar__comment">
                         <li class="sidebar__comment__item">
-                            <a href="blog-details.html">Rasalina Sponde</a>
-                            <p>There are many variations of passages of lorem ipsum available, but the majority have</p>
+                            <a href="blog-details.html"></a>
                         </li>
                     </ul>
                 </div>
