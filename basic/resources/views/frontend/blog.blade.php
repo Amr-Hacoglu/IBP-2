@@ -13,11 +13,11 @@ Blog | EasyLearning Website
                     <div class="row justify-content-center">
                         <div class="col-xl-6 col-lg-8 col-md-10">
                             <div class="breadcrumb__wrap__content">
-               <h2 class="title"> All Blogs </h2>
+               <h2 class="title"> All Works </h2>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                                        <li class="breadcrumb-item active" aria-current="page">Works</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -47,13 +47,13 @@ Blog | EasyLearning Website
                         @foreach($allblogs as $item)
 <div class="standard__blog__post">
     <div class="standard__blog__thumb">
-        <a href="blog-details.html"><img src="{{ asset($item->blog_image) }}" alt=""></a>
-        <a href="blog-details.html" class="blog__link"><i class="far fa-long-arrow-right"></i></a>
+        <a href="{{ route('blog.details',$item->id) }}"><img src="{{ asset($item->blog_image) }}" alt=""></a>
+        <a href="{{ route('blog.details',$item->id) }}" class="blog__link"><i class="far fa-long-arrow-right"></i></a>
     </div>
     <div class="standard__blog__content">
         <div class="blog__post__avatar">
             <div class="thumb"><img src="{{ asset($item->blog_image) }}" alt=""></div>
-            <span class="post__by">By : <a href="#">Halina Spond</a></span>
+            <span class="post__by">By : <a href="#">Amr Hacoglu</a></span>
         </div>
         <h2 class="title"><a href="{{ route('blog.details',$item->id) }}">{{$item->blog_title}}</a></h2>
         <p>{!! Str::limit($item->blog_description, 200) !!}  </p>
@@ -82,16 +82,16 @@ Blog | EasyLearning Website
 
 
         <div class="widget">
-            <h4 class="widget-title">Recent Blog</h4>
+            <h4 class="widget-title">Recent Works</h4>
             <ul class="rc__post">
 
                @foreach($allblogs as $all )
                 <li class="rc__post__item">
                     <div class="rc__post__thumb">
-                        <a href="blog-details.html"><img src="{{ asset($all->blog_image) }} " alt=""></a>
+                        <a href="{{ route('blog.details',$all->id) }}"><img src="{{ asset($all->blog_image) }} " alt=""></a>
                     </div>
                     <div class="rc__post__content">
-                        <h5 class="title"><a href="blog-details.html">{{ $all->blog_title }}
+                        <h5 class="title"><a href="{{ route('blog.details',$all->id) }}">{{ $all->blog_title }}
                          </a></h5>
                         <span class="post-date"><i class="fal fa-calendar-alt"></i> {{ Carbon\Carbon::parse($all->created_at)->diffForHumans() }} </span>
                     </div>
@@ -112,40 +112,12 @@ Blog | EasyLearning Website
 
 
                                 <div class="widget">
-                                    <h4 class="widget-title">Recent Comment</h4>
+                                    <h4 class="widget-title">Notes</h4>
                                     <ul class="sidebar__comment">
                                         <li class="sidebar__comment__item">
                                             <a href="blog-details.html">Rasalina Sponde</a>
                                             <p>There are many variations of passages of lorem ipsum available, but the majority have</p>
                                         </li>
-                                        <li class="sidebar__comment__item">
-                                            <a href="blog-details.html">Rasalina Sponde</a>
-                                            <p>There are many variations of passages of lorem ipsum available, but the majority have</p>
-                                        </li>
-                                        <li class="sidebar__comment__item">
-                                            <a href="blog-details.html">Rasalina Sponde</a>
-                                            <p>There are many variations of passages of lorem ipsum available, but the majority have</p>
-                                        </li>
-                                        <li class="sidebar__comment__item">
-                                            <a href="blog-details.html">Rasalina Sponde</a>
-                                            <p>There are many variations of passages of lorem ipsum available, but the majority have</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="widget">
-                                    <h4 class="widget-title">Popular Tags</h4>
-                                    <ul class="sidebar__tags">
-                                        <li><a href="blog.html">Business</a></li>
-                                        <li><a href="blog.html">Design</a></li>
-                                        <li><a href="blog.html">apps</a></li>
-                                        <li><a href="blog.html">landing page</a></li>
-                                        <li><a href="blog.html">data</a></li>
-                                        <li><a href="blog.html">website</a></li>
-                                        <li><a href="blog.html">book</a></li>
-                                        <li><a href="blog.html">Design</a></li>
-                                        <li><a href="blog.html">product design</a></li>
-                                        <li><a href="blog.html">landing page</a></li>
-                                        <li><a href="blog.html">data</a></li>
                                     </ul>
                                 </div>
                             </aside>
@@ -157,35 +129,7 @@ Blog | EasyLearning Website
 
 
             <!-- contact-area -->
-            <section class="homeContact homeContact__style__two">
-                <div class="container">
-                    <div class="homeContact__wrap">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="section__title">
-                                    <span class="sub-title">07 - Say hello</span>
-                                    <h2 class="title">Any questions? Feel free <br> to contact</h2>
-                                </div>
-                                <div class="homeContact__content">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
-                                    <h2 class="mail"><a href="mailto:Info@webmail.com">Info@webmail.com</a></h2>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="homeContact__form">
-                                    <form action="#">
-                                        <input type="text" placeholder="Enter name*">
-                                        <input type="email" placeholder="Enter mail*">
-                                        <input type="number" placeholder="Enter number*">
-                                        <textarea name="message" placeholder="Enter Massage*"></textarea>
-                                        <button type="submit">Send Message</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
             <!-- contact-area-end -->
 
         </main>

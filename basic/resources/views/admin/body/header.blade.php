@@ -3,21 +3,21 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="index.html" class="logo logo-dark">
-                                <span class="logo-sm">
-                                    <img src="{{ asset('backend/assets/images/3mro.png') }}" alt="logo-sm" height="22">
-                                </span>
+                <a href="{{ route('dashboard') }}" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="{{ asset('frontend/assets/img/logo/logo_white.png') }}" alt="logo-sm" height="22">
+                    </span>
                     <span class="logo-lg">
-                                    <img src="{{ asset('backend/assets/images/3mro.png') }}" alt="logo-dark" height="20">
-                                </span>
+                        <img src="{{ asset('frontend/assets/img/logo/logo_black.png') }}" alt="logo-dark" height="20">
+                    </span>
                 </a>
 
-                <a href="index.html" class="logo logo-light">
+                <a href="{{ route('dashboard') }}" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="{{ asset('backend/assets/images/3mro.png') }}" alt="logo-sm-light" height="22">
+                                    <img src="{{ asset('frontend/assets/img/logo/logo_black.png') }}" alt="logo-sm-light" height="22">
                                 </span>
                     <span class="logo-lg">
-                                    <img src="{{ asset('backend/assets/images/3mro.png') }}" alt="logo-light" height="20">
+                                    <img src="{{ asset('frontend/assets/img/logo/logo_white.png') }}" alt="logo-light" height="20">
                                 </span>
                 </a>
             </div>
@@ -27,12 +27,6 @@
             </button>
 
             <!-- App Search-->
-            <form class="app-search d-none d-lg-block">
-                <div class="position-relative">
-                    <input type="text" class="form-control" placeholder="Search...">
-                    <span class="ri-search-line"></span>
-                </div>
-            </form>
 
 
         </div>

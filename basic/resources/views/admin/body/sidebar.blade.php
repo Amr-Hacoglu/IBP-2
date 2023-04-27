@@ -46,11 +46,11 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>Portfolio Page Setup</span>
+                        <span>Cert. and Cour. Page</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('all.portfolio') }}">All Portfolio</a></li>
-                        <li><a href="{{ route('add.portfolio') }}">Add Portfolio</a></li>
+                        <li><a href="{{ route('all.portfolio') }}">All Certificates&Courses</a></li>
+                        <li><a href="{{ route('add.portfolio') }}">Add Certificates&Courses</a></li>
 
                     </ul>
                 </li>
@@ -60,22 +60,22 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-account-circle-line"></i>
-                        <span>Blog Category</span>
+                        <span>Work Category</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('all.blog.category') }}">All Blog Category</a></li>
-                        <li><a href="{{ route('add.blog.category') }}">Add Blog Category</a></li>
+                        <li><a href="{{ route('all.blog.category') }}">All Work Category</a></li>
+                        <li><a href="{{ route('add.blog.category') }}">Add Work Category</a></li>
                     </ul>
                 </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-profile-line"></i>
-                        <span>Blog Page</span>
+                        <span>Work Page</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('all.blog') }}">All Blog</a></li>
-                        <li><a href="{{ route('add.blog') }}">Add Blog</a></li>
+                        <li><a href="{{ route('all.blog') }}">All Work</a></li>
+                        <li><a href="{{ route('add.blog') }}">Add Work</a></li>
 
                     </ul>
                 </li>
@@ -91,7 +91,7 @@
 
                 </ul>
                 </li>
-                
+
                 <li>
                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                     <i class="ri-profile-line"></i>

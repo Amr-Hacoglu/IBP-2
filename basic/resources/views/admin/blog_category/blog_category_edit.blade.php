@@ -10,13 +10,13 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h4 class="card-title">Edit Blog Category Page </h4> <br><br>
+                            <h4 class="card-title">Edit Work Category Page </h4> <br><br>
 
                             <form method="post" action="{{ route('update.blog.category',$blogcategory->id) }}" >
                                 @csrf
 
                                 <div class="row mb-3">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Blog Category Name</label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Work Category Name</label>
                                     <div class="col-sm-10">
                                         <input name="blog_category" class="form-control" type="text" value="{{ $blogcategory->blog_category }}" id="example-text-input">
                                         @error('blog_category')
@@ -26,7 +26,7 @@
                                 </div>
                                 <!-- end row -->
 
-                                <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Blog Category">
+                                <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Work Category">
                             </form>
                         </div>
                     </div>

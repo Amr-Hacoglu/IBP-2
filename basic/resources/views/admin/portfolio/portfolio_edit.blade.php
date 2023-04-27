@@ -10,7 +10,7 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h4 class="card-title">Portfolio Edit Page </h4>
+                        <h4 class="card-title">Certificates And Courses Edit Page </h4>
 
                         <form method="post" action="{{ route('update.portfolio') }}" enctype="multipart/form-data">
                             @csrf
@@ -18,7 +18,7 @@
                             <input type="hidden" name="id" value="{{  $portfolio->id }}">
 
                             <div class="row mb-3">
-                                <label for="example-text-input" class="col-sm-2 col-form-label">portfolio Name</label>
+                                <label for="example-text-input" class="col-sm-2 col-form-label">Certificates And Courses Name</label>
                                 <div class="col-sm-10">
                                     <input name="portfolio_name" class="form-control" type="text" value="{{ $portfolio->portfolio_name }}" id="example-text-input">
                                     @error('portfolio_name')
@@ -29,7 +29,7 @@
                             <!-- end row -->
 
                             <div class="row mb-3">
-                                <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Title </label>
+                                <label for="example-text-input" class="col-sm-2 col-form-label">Certificates And Courses Title </label>
                                 <div class="col-sm-10">
                                     <input name="portfolio_title" class="form-control" type="text" value="{{ $portfolio->portfolio_title }}" id="example-text-input">
 
@@ -41,7 +41,7 @@
                             <!-- end row -->
 
                             <div class="row mb-3">
-                                <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Description </label>
+                                <label for="example-text-input" class="col-sm-2 col-form-label">Certificates And Courses Description </label>
                                 <div class="col-sm-10">
       <textarea id="elm1" name="portfolio_description">
       {{ $portfolio->portfolio_description }}
@@ -51,7 +51,7 @@
                             <!-- end row -->
 
                             <div class="row mb-3">
-                                <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Image </label>
+                                <label for="example-text-input" class="col-sm-2 col-form-label">Certificates And Courses Image </label>
                                 <div class="col-sm-10">
                                     <input name="portfolio_image" class="form-control" type="file" id="image">
                                 </div>
@@ -66,7 +66,7 @@
                                 </div>
                             </div>
                             <!-- end row -->
-                            <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Portfolio Data">
+                            <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Certificates And Courses Data">
                         </form>
                     </div>
                 </div>

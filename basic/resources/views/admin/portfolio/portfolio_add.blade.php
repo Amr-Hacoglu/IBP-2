@@ -10,13 +10,13 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h4 class="card-title">Portfolio Page </h4>
+                            <h4 class="card-title">Certificates And Courses Page </h4>
 
                             <form method="post" action="{{ route('store.portfolio') }}" enctype="multipart/form-data">
                                 @csrf
 
                                 <div class="row mb-3">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Name</label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Certificates Or Courses Name</label>
                                     <div class="col-sm-10">
                                         <input name="portfolio_name" class="form-control" type="text" id="example-text-input">
                                         @error('portfolio_name')
@@ -27,7 +27,7 @@
                                 <!-- end row -->
 
                                 <div class="row mb-3">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Title </label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Certificates Or Courses Title </label>
                                     <div class="col-sm-10">
                                         <input name="portfolio_title" class="form-control" type="text" id="example-text-input">
                                         @error('portfolio_title')
@@ -38,7 +38,7 @@
                                 <!-- end row -->
 
                                 <div class="row mb-3">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Description </label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Certificates Or Courses Description </label>
                                     <div class="col-sm-10">
       <textarea id="elm1" name="portfolio_description">
 
@@ -48,7 +48,7 @@
                                 <!-- end row -->
 
                                 <div class="row mb-3">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Image </label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Certificates Or Courses Image </label>
                                     <div class="col-sm-10">
                                         <input name="portfolio_image" class="form-control" type="file" id="image">
                                     </div>
@@ -63,7 +63,7 @@
                                     </div>
                                 </div>
                                 <!-- end row -->
-                                <input type="submit" class="btn btn-info waves-effect waves-light" value="Insert Portfolio Data">
+                                <input type="submit" class="btn btn-info waves-effect waves-light" value="Insert Certificates Or Courses Data">
                             </form>
                         </div>
                     </div>

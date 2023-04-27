@@ -15,7 +15,6 @@
                 <div class="banner__content">
                     <h2 class="title wow fadeInUp" data-wow-delay=".2s"><span>{{ $homeslide->title  }}</h2> {{--take the title from database and display it on the page--}}
                     <p class="wow fadeInUp" data-wow-delay=".4s">{{ $homeslide->short_title  }}</p> {{--take the shortTitle from database and display it on the page--}}
-                    <a href="about.html" class="btn banner__btn wow fadeInUp" data-wow-delay=".6s">more about me</a>
                 </div>
             </div>
         </div>
