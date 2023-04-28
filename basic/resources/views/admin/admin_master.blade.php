@@ -34,7 +34,18 @@
 
 <body data-topbar="dark">
 
-<!-- <body data-layout="horizontal" data-topbar="dark"> -->
+<div class="new">
+{{--    <img src="{{ asset('backend/assets/images/new21.jpg') }}" alt="3mro">--}}
+</div>
+
+<style>
+    .new {
+        margin-top: 65px;
+        margin-bottom: 10px;
+        margin-right: 125px;
+        margin-left: 400px;
+    }
+</style>
 
 <!-- Begin page -->
 <div id="layout-wrapper">
@@ -48,12 +59,14 @@
     <!-- ============================================================== -->
     <div class="main-content">
 
+
     @yield('admin')
     <!-- End Page-content -->
     @include('admin.body.footer')
 
     </div>
     <!-- end main content-->
+
 
     </div>
 <!-- END layout-wrapper -->
@@ -63,7 +76,6 @@
 <!-- /Right-bar -->
 
 <!-- Right bar overlay-->
-<div class="rightbar-overlay"></div>
 
 <!-- JAVASCRIPT -->
 <script src="{{ asset ('backend/assets/libs/jquery/jquery.min.js')}}"></script>
@@ -137,3 +149,5 @@
     <script src="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.min.js" ></script>
 
 </html>
+
+

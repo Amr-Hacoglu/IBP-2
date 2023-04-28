@@ -29,6 +29,7 @@ $route = Route::current()->getName();
                             <div class="header__btn d-none d-md-block">
                                 <a href="{{ route('contact.me') }}" class="btn">Contact me</a>
                             </div>
+
                         </nav>
                     </div>
                     <!-- Mobile Menu  -->

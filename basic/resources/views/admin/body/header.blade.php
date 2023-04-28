@@ -5,19 +5,19 @@
             <div class="navbar-brand-box">
                 <a href="{{ route('dashboard') }}" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="{{ asset('frontend/assets/img/logo/3mro.png') }}" alt="logo-sm" height="22">
+                        <img src="{{ asset('backend/assets/images/3mro.png') }}" alt="logo-sm" height="80">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ asset('frontend/assets/img/logo/3mro.png') }}" alt="logo-dark" height="20">
+                        <img src="{{ asset('backend/assets/images/3mro.png') }}" alt="logo-dark" height="80">
                     </span>
                 </a>
 
                 <a href="{{ route('dashboard') }}" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="{{ asset('frontend/assets/img/logo/3mro.png') }}" alt="logo-sm-light" height="22">
+                                    <img src="{{ asset('backend/assets/images/3mro.png') }}" alt="logo-sm-light" height="80">
                                 </span>
                     <span class="logo-lg">
-                                    <img src="{{ asset('frontend/assets/img/logo/3mro.png') }}" alt="logo-light" height="20">
+                                    <img src="{{ asset('backend/assets/images/3mro.png') }}" alt="logo-light" height="80">
                                 </span>
                 </a>
             </div>
@@ -56,8 +56,6 @@
                     <!-- item-->
                     <a class="dropdown-item" href="{{ route('admin.profile') }}"><i class="ri-user-line align-middle me-1"></i> Profile</a>
                     <a class="dropdown-item" href="{{ route('change.password') }}"><i class="ri-wallet-2-line align-middle me-1"></i> Change Password</a>
-                    <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end mt-1">11</span><i class="ri-settings-2-line align-middle me-1"></i> Settings</a>
-                    <a class="dropdown-item" href="#"><i class="ri-lock-unlock-line align-middle me-1"></i> Lock screen</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item text-danger" href="{{ route('admin.logout') }}"><i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</a>
                 </div>
