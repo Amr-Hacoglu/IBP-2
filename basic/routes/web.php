@@ -11,6 +11,8 @@ use App\Http\Controllers\Home\BlogController;
 use App\Http\Controllers\Home\FooterController;
 use App\Http\Controllers\Home\ContactController;
 use App\Http\Controllers\Demo\DemoController;
+use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\MessagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -133,5 +135,25 @@ Route::controller(ContactController::class)->group(function () {
     Route::get('/contact/message', 'ContactMessage')->name('contact.message');
     Route::get('/delete/message/{id}', 'DeleteMessage')->name('delete.message');
 });
+
+// Announcements All Route
+Route::prefix('announcements')->group(function () {
+    Route::get('/', [AnnouncementController::class, 'index'])->name('announcements.index');
+    Route::get('/create', [AnnouncementController::class, 'create'])->name('announcements.create');
+    Route::get('/view', [AnnouncementController::class, 'view'])->name('announcements.view');
+    Route::post('/', [AnnouncementController::class, 'store'])->name('announcements.store');
+    Route::get('/{announcement}', [AnnouncementController::class, 'show'])->name('announcements.show');
+    Route::get('/{announcement}/edit', [AnnouncementController::class, 'edit'])->name('announcements.edit');
+    Route::put('/{announcement}', [AnnouncementController::class, 'update'])->name('announcements.update');
+    Route::delete('/{announcement}', [AnnouncementController::class, 'destroy'])->name('announcements.destroy');
+});
+
+Route::get('/messages', [MessagesController::class, 'index'])->name('messages.index');
+Route::get('/messages/create', [MessagesController::class, 'create'])->name('messages.create');
+Route::post('/messages', [MessagesController::class, 'store'])->name('messages.store');
+Route::get('/messages/{message}', [MessagesController::class, 'show'])->name('messages.show');
+Route::post('/messages/{message}/reply', [MessagesController::class, 'reply'])->name('messages.reply');
+Route::post('/messages/{message}/sendReply', [MessagesController::class, 'sendReply'])->name('messages.sendReply');
+
 
 require __DIR__.'/auth.php';

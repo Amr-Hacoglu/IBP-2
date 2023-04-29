@@ -22,12 +22,12 @@ $route = Route::current()->getName();
                                 <li class="{{ ($route == 'home.about')? 'active' : '' }}"><a href="{{ route('home.about') }}">About</a></li>
                                     <li class="{{ ($route == 'home.portfolio') ? 'active' : '' }}"><a href="{{ route('home.portfolio') }}">Certificates and Courses</a></li>
                                     <li class="{{ ($route == 'home.blog') ? 'active' : '' }}"><a href="{{ route('home.blog') }}">My Work</a></li>
-                                <!-- <li class="{{ ($route == 'contact.me') ? 'active' : '' }}"><a href="{{ route('contact.me') }}">contact me</a></li> -->
+                                    <li class="{{ ($route == 'contact.me') ? 'active' : '' }}"><a href="{{ route('contact.me') }}">contact me</a></li>
                                 </ul>
                             </div>
 
                             <div class="header__btn d-none d-md-block">
-                                <a href="{{ route('contact.me') }}" class="btn">Contact me</a>
+                                <a href="{{ route('announcements.view') }}" class="btn">Announcements</a>
                             </div>
 
                         </nav>
