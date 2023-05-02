@@ -12,13 +12,13 @@ class VendorController extends Controller
     //
     public function VendorDashboard(){
 
-        return view('vendor.index');
+        return view('frontend.index');
 
-    } // End Mehtod
+    } // End Method
 
     public function VendorLogin(){
         return view('vendor.vendor_login');
-    } // End Mehtod
+    } // End Method
 
     public function VendorDestroy(Request $request){
         Auth::guard('web')->logout();
@@ -28,7 +28,7 @@ class VendorController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/vendor/login');
-    } // End Mehtod
+    } // End Method
 
     public function VendorProfile(){
 
@@ -36,7 +36,7 @@ class VendorController extends Controller
         $vendorData = User::find($id);
         return view('vendor.vendor_profile_view',compact('vendorData'));
 
-    } // End Mehtod
+    } // End Method
 
     public function VendorProfileStore(Request $request){
 
@@ -67,11 +67,11 @@ class VendorController extends Controller
 
         return redirect()->back()->with($notification);
 
-    } // End Mehtod
+    } // End Method
 
     public function VendorChangePassword(){
         return view('vendor.vendor_change_password');
-    } // End Mehtod
+    } // End Method
 
     public function VendorUpdatePassword(Request $request){
         // Validation
@@ -92,6 +92,6 @@ class VendorController extends Controller
         ]);
         return back()->with("status", " Password Changed Successfully");
 
-    } // End Mehtod
+    } // End Method
 
 }
