@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Images, Image Maps, and Color Example</title>
+</head>
+<body>
+
+<!-- Single Image -->
+<img src="image.jpg" alt="Description of the image">
+
+<br>
+
+<!-- Image with Link -->
+<a href="destination.html">
+  <img src="image.jpg" alt="Description of the image">
+</a>
+
+<br>
+
+<!-- Resized Image -->
+<img src="image.jpg" alt="Description of the image" width="200" height="150">
+
+<br>
+
+<!-- Image Map -->
+<img src="image.jpg" alt="Description of the image" usemap="#myMap">
+<map name="myMap">
+  <area shape="rect" coords="0,0,100,100" href="page1.html" alt="Area 1">
+  <area shape="circle" coords="200,200,50" href="page2.html" alt="Area 2">
+</map>
+
+<br>
+
+<!-- Background Color -->
+<div style="background-color: #ff0000;">Red background</div>
+
+<br>
+
+<!-- Text Color -->
+<p style="color: #00ff00;">Green text</p>
+
+<br>
+
+<!-- Text and Background Colors with CSS -->
+<style>
+  .red-text {
+    color: #ff0000;
+  }
+  .blue-background {
+    background-color: #0000ff;
+  }
+</style>
+<div class="red-text blue-background">Red text on a blue background</div>
+
+</body>
+</html>
