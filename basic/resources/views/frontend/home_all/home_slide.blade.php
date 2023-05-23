@@ -23,6 +23,8 @@
         <a href="#aboutSection" class="scroll__link">Scroll down</a>
     </div>
     <div class="banner__video">
-        <a href="{{ $homeslide->video_url  }}" class="popup-video"><i class="fas fa-play"></i></a> {{--take the url from database and display it on the page--}}
+        <a href="https://www.linkedin.com/in/amr-haco%C4%9Flu-55324a256/">
+            <img src="{{ asset('frontend/assets/img/linkedin.png') }}" alt="Linked-in" style="width: 150px;">
+        </a>
     </div>
 </section>
