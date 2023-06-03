@@ -50,7 +50,7 @@ Route::controller(AdminController::class)->group(function (){
     Route::get('/about/logout','destroy')->name('admin.logout');
 });
 
-// About Page All Route
+// About Page Routes
 Route::controller(AboutController::class)->group(function () {
     Route::get('/about/page', 'AboutPage')->name('about.page');
     Route::post('/update/about', 'UpdateAbout')->name('update.about');
@@ -85,7 +85,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Portfolio All Route
+// CertAndCour All Route
 Route::controller(PortfolioController::class)->group(function () {
     Route::get('/all/CertAndCour', 'AllPortfolio')->name('all.portfolio');
     Route::get('/add/CertAndCour', 'AddPortfolio')->name('add.portfolio');
@@ -97,7 +97,7 @@ Route::controller(PortfolioController::class)->group(function () {
     Route::get('/CertAndCour', 'HomePortfolio')->name('home.portfolio');
 });
 
-// Blog Category All Routes
+// Work Category All Routes
 Route::controller(BlogCategoryController::class)->group(function () {
     Route::get('/all/Work/category', 'AllBlogCategory')->name('all.blog.category');
     Route::get('/add/Work/category', 'AddBlogCategory')->name('add.blog.category');
@@ -105,10 +105,9 @@ Route::controller(BlogCategoryController::class)->group(function () {
     Route::get('/edit/Work/category/{id}', 'EditBlogCategory')->name('edit.blog.category');
     Route::post('/update/Work/category/{id}', 'UpdateBlogCategory')->name('update.blog.category');
     Route::get('/delete/Work/category/{id}', 'DeleteBlogCategory')->name('delete.blog.category');
-
 });
 
-// Blog All Route
+// Work All Route
 Route::controller(BlogController::class)->group(function () {
     Route::get('/all/Work', 'AllBlog')->name('all.blog');
     Route::get('/add/Work', 'AddBlog')->name('add.blog');
@@ -149,12 +148,15 @@ Route::prefix('announcements')->group(function () {
     Route::delete('/{announcement}', [AnnouncementController::class, 'destroy'])->name('announcements.destroy');
 });
 
-Route::get('/messages', [MessagesController::class, 'index'])->name('messages.index');
-Route::get('/messages/create', [MessagesController::class, 'create'])->name('messages.create');
-Route::post('/messages', [MessagesController::class, 'store'])->name('messages.store');
-Route::get('/messages/{message}', [MessagesController::class, 'show'])->name('messages.show');
-Route::post('/messages/{message}/reply', [MessagesController::class, 'reply'])->name('messages.reply');
-Route::post('/messages/{message}/sendReply', [MessagesController::class, 'sendReply'])->name('messages.sendReply');
-
+/*
+Route::controller(MessagesController::class)->group(function () {
+    Route::get('/messages','index'])->name('messages.index');
+    Route::get('/messages/create','create'])->name('messages.create');
+    Route::post('/messages','store'])->name('messages.store');
+    Route::get('/messages/{message}','show'])->name('messages.show');
+    Route::post('/messages/{message}/reply','reply'])->name('messages.reply');
+    Route::post('/messages/{message}/sendReply','sendReply'])->name('messages.sendReply');
+});
+*/
 
 require __DIR__.'/auth.php';

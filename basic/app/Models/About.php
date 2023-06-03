@@ -8,5 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class About extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+    
+    protected $fillable = [
+        'title',
+        'short_title',
+        'short_description',
+        'long_description',
+        'about_image',
+    ];
+    
 }

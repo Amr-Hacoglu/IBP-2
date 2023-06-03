@@ -22,14 +22,14 @@
                     </div>
                 </div>
                 <div class="breadcrumb__wrap__icon">
-                    <ul>
-                        <li><img src="assets/img/icons/breadcrumb_icon01.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon02.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon03.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon04.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon05.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon06.png" alt=""></li>
-                    </ul>
+                <ul>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon01.png') }}" alt=""></li>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon02.png') }}" alt=""></li>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon03.png') }}" alt=""></li>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon04.png') }}" alt=""></li>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon05.png') }}" alt=""></li>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon06.png') }}" alt=""></li>
+                </ul>
                 </div>
             </section>
             <!-- breadcrumb-area-end -->
@@ -57,8 +57,7 @@
                         <ul class="blog__details__tag">
                             <li class="title">Tag:</li>
                             <li class="tags-list">
-            {{--                    <a href="#">{{ $blogs->blog_tags }}</a>--}}
-
+                                <a href="#">{{ $blogs->blog_tags }}</a>
                             </li>
                         </ul>
                         <ul class="blog__details__social">
@@ -102,14 +101,6 @@
                         @foreach($categories as $cat)
                         <li class="sidebar__cat__item"><a href="{{ route('category.blog',$cat->id) }}">{{ $cat->blog_category }} </a></li>
                         @endforeach
-                    </ul>
-                </div>
-                <div class="widget">
-                    <h4 class="widget-title">Recent Comment</h4>
-                    <ul class="sidebar__comment">
-                        <li class="sidebar__comment__item">
-                            <a href="blog-details.html"></a>
-                        </li>
                     </ul>
                 </div>
             </aside>

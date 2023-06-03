@@ -25,14 +25,14 @@ Blog | EasyLearning Website
                     </div>
                 </div>
                 <div class="breadcrumb__wrap__icon">
-                    <ul>
-                        <li><img src="assets/img/icons/breadcrumb_icon01.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon02.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon03.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon04.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon05.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon06.png" alt=""></li>
-                    </ul>
+                <ul>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon01.png') }}" alt=""></li>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon02.png') }}" alt=""></li>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon03.png') }}" alt=""></li>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon04.png') }}" alt=""></li>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon05.png') }}" alt=""></li>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon06.png') }}" alt=""></li>
+                </ul>
                 </div>
             </section>
             <!-- breadcrumb-area-end -->
@@ -102,16 +102,6 @@ Blog | EasyLearning Website
                 @endforeach
             </ul>
         </div>
-
-
-                                <div class="widget">
-                                    <h4 class="widget-title">Notes</h4>
-                                    <ul class="sidebar__comment">
-                                        <li class="sidebar__comment__item">
-                                            <a href="blog-details.html"></a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </aside>
                         </div>
                     </div>

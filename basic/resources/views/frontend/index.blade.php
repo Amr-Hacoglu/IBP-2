@@ -2,7 +2,7 @@
 @section('main')
 
 @section('title')
-Home | EasyLearning Website
+Amr Hacoglu Page
 @endsection
 
     <!-- banner-area -->

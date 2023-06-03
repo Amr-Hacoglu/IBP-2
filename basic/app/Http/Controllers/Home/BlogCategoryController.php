@@ -23,9 +23,6 @@ class BlogCategoryController extends Controller
 
     public function StoreBlogCategory(Request $request){
 
-        
-
-
         BlogCategory::insert([
             'blog_category' => $request->blog_category,
 

@@ -11,7 +11,7 @@ use Illuminate\Support\Carbon;
 
 class AboutController extends Controller
 {
-    public function AboutPage(){
+    public function AboutPage(){ //backend
 
         $aboutpage = About::find(1);
         return view('admin.about_page.about_page_all',compact('aboutpage'));
@@ -22,11 +22,11 @@ class AboutController extends Controller
 
         $about_id = $request->id;
 
-        if ($request->file('about_image')) {
+        if ($request->file('about_image')) { //checking if a file(image) named "about_image" was uploaded in the request (if there is an photo updated)
             $image = $request->file('about_image');
-            $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();  // 3434343443.jpg
-
-            Image::make($image)->resize(523,605)->save('upload/home_about/'.$name_gen);  //523,605 is the size of the photo that required
+            $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();  // 353A54B5E.jpg
+            
+            Image::make($image)->resize(523,605)->save('upload/home_about/'.$name_gen); 
             $save_url = 'upload/home_about/'.$name_gen;
 
             About::findOrFail($about_id)->update([
@@ -35,7 +35,7 @@ class AboutController extends Controller
                 'short_description' => $request->short_description,
                 'long_description' => $request->long_description,
                 'about_image' => $save_url,
-
+                
             ]);
             $notification = array(
                 'message' => 'About Page Updated with Image Successfully',
@@ -81,9 +81,9 @@ class AboutController extends Controller
 
         $image = $request->file('multi_image');
 
-        foreach ($image as $multi_image) { //because it's a multiImages
+        foreach ($image as $multi_image) { 
 
-            $name_gen = hexdec(uniqid()).'.'.$multi_image->getClientOriginalExtension();  // 3434343443.jpg
+            $name_gen = hexdec(uniqid()).'.'.$multi_image->getClientOriginalExtension();
 
             Image::make($multi_image)->resize(220,220)->save('upload/multi/'.$name_gen);
             $save_url = 'upload/multi/'.$name_gen;
@@ -155,7 +155,7 @@ class AboutController extends Controller
         $multi = MultiImage::findOrFail($id);
         $img = $multi->multi_image;
         unlink($img);
-
+        
         MultiImage::findOrFail($id)->delete();
 
         $notification = array(
